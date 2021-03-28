@@ -1,17 +1,16 @@
 [package]
-name = "dsf_core"
-version = "0.1.0"
 authors = ["Jazarro <nospam.git@boschman.io>"]
 edition = "2018"
+name = "dsf_core"
+version = "0.1.0"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-dsf_precompile = { path = "../dsf_precompile" }
+dsf_precompile = {path = "../dsf_precompile"}
 
-# Amethyst version and features used in this workspace are specified in the dwarf_seeks_fortune crate.
-amethyst = { version = "*" }
+amethyst = {git = "https://github.com/saveriomiroddi/amethyst-dev", branch = "REFERENCE/profiled_frame_limiter/0.15.3", features = ["vulkan"]}
 
-log = { version = "0.4.6", features = ["serde"] }
-serde = { version = "1.0", features = ["derive"] }
-rand = { version = "0.7.3" }
+log = {version = "0.4.6", features = ["serde"]}
+rand = {version = "0.7.3"}
+serde = {version = "1.0", features = ["derive"]}

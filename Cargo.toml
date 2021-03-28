@@ -9,7 +9,7 @@ edition = "2018"
 # ---------- Mac users, configuration required: -------------
 # -----------------------------------------------------------
 # Windows / Linux users, use the following line:
-amethyst = { version = "=0.15.3", features = ["vulkan"] }
+amethyst = { git = "https://github.com/saveriomiroddi/amethyst-dev", branch = "REFERENCE/profiled_frame_limiter/0.15.3", features = ["vulkan"] }
 # Mac users, use the following line:
 #amethyst = {version = "=0.15.3", features = ["metal"]}
 # -----------------------------------------------------------

@@ -1,6 +1,6 @@
 use amethyst::{
-    Application, CoreApplication, GameData, GameDataBuilder, SimpleState, SimpleTrans, StateData,
-    StateEvent, Trans,
+    core::frame_limiter::FrameRateLimitStrategy, Application, CoreApplication, GameData,
+    GameDataBuilder, SimpleState, SimpleTrans, StateData, StateEvent, Trans,
 };
 use std::path::PathBuf;
 
@@ -61,7 +61,7 @@ pub fn start_game(
     let mut game: Application<GameData> =
         CoreApplication::build(resources, MainState { real_state: state })
             .unwrap()
-            // .with_frame_limit(FrameRateLimitStrategy::Sleep, 60)
+            .with_frame_limit(FrameRateLimitStrategy::Sleep, 60)
             .build(game_data_builder)
             .unwrap();
     game.run();
